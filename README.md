@@ -27,3 +27,4 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 | `api/v1/users/sessions/` | `DELETE`    | None                                                                                   | Deletes a user session                             |
 
 <!-- added secrets in github -->
+<!-- more stuff -->
