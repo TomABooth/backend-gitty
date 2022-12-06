@@ -25,3 +25,6 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 | `/api/v1/users/me/`      | `GET`       | None                                                                                   | Returns current user                               |
 | `/api/v1/users/`         | `GET`       | None                                                                                   | Authorized endpoint - returns all users for admin. |
 | `api/v1/users/sessions/` | `DELETE`    | None                                                                                   | Deletes a user session                             |
+
+<!-- added secrets in github -->
+<!-- more stuff -->
