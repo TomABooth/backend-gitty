@@ -35,4 +35,16 @@ describe('github auth', () => {
       exp: expect.any(Number),
     });
   });
+  it('DELETE /api/v1/github signs out a user', async () => {
+    const agent = request.agent(app);
+    await agent.get('/api/v1/github/callback?code=42');
+    const bye = await agent.delete('/api/v1/github/dashboard');
+    expect(bye.body.message).toEqual('Signed out successfully!');
+    const check = await agent.get('/api/v1/github/dashboard');
+
+    expect(check.body).toEqual({
+      message: 'You must be signed in to continue',
+      status: 401,
+    });
+  });
 });
